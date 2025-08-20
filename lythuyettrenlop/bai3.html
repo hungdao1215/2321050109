@@ -1,0 +1,130 @@
+<html>
+    <body>
+        <marquee>
+            <img src="good-morning.png">
+        </marquee>
+        <h1>Bài 3</h1>
+        <!--Danh sách có thứ tự-->
+        <P>Danh sách các công việc vào buổi sáng</P>
+        <ol>
+            <li>Thức dậy</li>
+            <li>Đánh răng</li>
+            <li>Ăn sáng</li>
+            <li>Đi học</li>
+            <li>Giải lao</li>
+        </ol>
+        <p>các ngôn ngữ lập trình web</p>
+        <!--không thứ tự ul, li-->
+        <ul>
+            <li>Python</li>
+            <li>PHP</li>
+            <li>JavaScript</li>
+            <li>C#</li>
+        </ul>
+        <h1>Form</h1>
+        <form>
+            <div>
+                <b>Họ và tên: </b>
+                <input type="text" name="hoten" placeholder="Nhập tên vào đây">
+            </div>
+            <br>
+            <div>
+                <b>Năm: </b>
+                <input type="text" name="nam" value="2025" readonly>
+            </div>
+            <br>
+            <div>
+                <b>Giới thiệu chi tiết vè bản thân</b>
+                <textarea name="gioithieu">Nhập giới thiệu....</textarea>
+            </div>
+            <div>
+                <b>Email: </b>
+                <input type="email" name="email" placeholder="Dạng @gmail.com">
+            </div>
+            <br>
+            <div>
+                <b>Số điện thoại: </b> <br>
+                <input name="sodienthoai"
+                type="tel"
+                placeholder="Dạng số: 09xxxxxxxxx"
+                required pattern="([0]{1}([0,3,9]{1})([0-9]{8}))">
+            </div>
+            <br>
+            <div>
+                <b>Giới tính</b><br>
+                <input type="radio" name="gioitinh" value="nam"> Nam<br>
+                <input type="radio" name="gioitinh" value="nu"> Nữ<br>
+                <input type="radio" name="gioitinh" value="khongxacdinh"> Không xác định<br>
+            </div>
+            <br>
+            <div>
+                <b>Sở thích</b> <br>
+                Game: <input type="checkbox" name="sothich" value="game"> <br>
+                Music: <input type="checkbox" name="sothich" value="music"> <br>
+                Sport: <input type="checkbox" name="sothich" value="sport"> <br>
+            </div>
+            <br>
+            <div>
+                <b>Trình duyệt ưa thích</b> <br>
+                <input list="browsers">
+                <datalist id="browsers">
+                    <option value="Internet Explorer">
+                    <option value="Firefox">
+                    <option value="Chrome">
+                    <option value="Opera">
+                </datalist>
+                <br>
+                <select name="browsers">
+                    <option value="Internet Explorer">Internet Explorer
+                    <option value="Firefox">Firefox
+                    <option value="Chrome">Chrome
+                    <option value="Opera">Opera
+                    <option value="Safari">Safari
+                    <option value="Cốc cốc">Cốc Cốc 
+                </select>
+            </div>
+            <div>
+                0 <input type="range" value="20"> 100
+            </div>
+            <div>
+                <b>Tuổi</b> <br>
+                <input type="number" name="tuoi">
+            </div>
+            <div>
+                <b>Ngày tháng năm sinh</b>
+                <input type="date" name="ngaythangnamsinh">
+            </div>
+            <br>
+            <div>
+                <b>Màu sắc yêu thích</b>
+                <input type="color" name="" id="">
+            </div>
+            <br>
+             <div>
+                <b>Chọn ảnh đại diện</b>
+                <input type="file">
+            </div>
+             <div>
+                <b>Mật khẩu</b>
+                <input type="password">
+            </div>
+            <br>
+            <div>
+                <input type="reset">
+            </div>
+            <br>
+             <div>
+                <input type="submit">
+            </div>
+        </form>
+
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ?si=pxtD5iMRImETy8YM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>"
+        <video controls width="560" height="315">
+        <source src="Rick Astley - Never Gonna Give You Up (Official Video) (4K Remaster).mp4" type="video/mp4">
+    </video>
+
+    <audio controls>
+        <source src="Rick Astley - Never Gonna Give You Up (Official Video) (4K Remaster).mp3" type="audio/mp3">
+    </audio>
+    </body>
+</html>
