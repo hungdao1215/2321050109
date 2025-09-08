@@ -29,8 +29,9 @@ ul {
     color: gray;
 }
 .logo {
-    height: 100px;
-    background-color: gray;
+    height:100px;
+    background-color: white;
+    display: flex;
 }
 main {
     display: flex;
@@ -39,11 +40,56 @@ main {
     width: 80%;
 }
 .noidung-phai {
-    height: 1000px;
-    background-color: chocolate;
+    height: 200px;
+    background-color: #2fa4e7;
     width: 20%;
 }
-
+.dangnhap{
+    background-color: #2fa4e7;
+    padding: 20px;
+    color: white;
+    font-size: x-large;
+    font-weight: bold;
+    border-radius: 10px 10px 0px 0px;
+}
+.nhaptendangnhap{
+    display: flex;
+    padding: 10px;
+}
+.nhapmatkhau{
+    display: flex;
+    padding: 10px;
+}
+.xacnhan{
+    display: flex;
+    padding: 20px;
+}
+.caidatappmobile{
+    color: white;
+    background-color: #2fa4e7;
+    padding: 20px;
+    font-size: x-large;
+    font-weight: bold;
+    border-radius: 10px 10px 0px 0px;
+}
+.thongbao{
+    width: 80%;
+}
+.thongbao-noidung{
+    display: flex;
+    list-style: none;
+}
+.thongbao-trai{
+    width: 30%;
+    height: 100px;
+}
+.thongbao-phai{
+    height: 200px;
+    background-color: white;
+    width:70%;
+    display: flex;
+     list-style: none;
+}
 .tieude {
     background-color: #2fa4e7;
     padding: 20px;
@@ -52,18 +98,54 @@ main {
     font-weight: bold;
     border-radius: 10px 10px 0px 0px;
 }
-
 .tintuc-danhsach {
     display: flex;
     justify-content: space-between;
 }
-
+.baiviet-thongbao-phai{
+    color: black;
+    font-size: large;
+    font-weight: bold;
+    text-decoration: none;
+    list-style: none;
+}
+.baiviet-thongbao-trai{
+    color: #2fa4e7;
+    font-size: large;
+    font-weight: bold;
+    text-decoration: none;
+}
 .baiviet {
     height: 200px;
     background-color: gray;
     width: 32%;
 }
+.huongdan-noidung{
+    height: 200px;
+    background-color: white;
+    width:70%;
+    display: flex;
+}
+.baiviet-huongdan{
+    text-decoration: none;
+    list-style: none;
+}
+.huongdan-baiviet{
+    color: black;
+    text-decoration: none;
+    list-style: none;
+    font-display: flex;
+}
 .img {
     height: 200px;
     width: 100%;
 }
+.footer-noidung{
+    background-color: #2fa4e7;
+    height:100px;
+    color:white;
+    text-align: center;
+    padding:20px;
+    font-family: Arial;
+    font-size:small;
+    }
