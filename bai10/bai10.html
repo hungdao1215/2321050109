@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js"></script>
+</head>
+<body>
+    <script>
+        let thongTinDonHang = {
+            maDonHang:"a123",
+            thongTinKhachHang: {
+                hoTen:"Khua ten A",
+                soDienThoai:"012345678",
+                trangThaiThanhVienThanThiet:false,
+            },
+        danhSachSanPham : {
+            sp01: {
+                    maSanPham: "1",
+                    tenSanPham: "Matcha",
+                    soLuong: 10,
+                    giaTien: "10000",
+                },
+                sp02: {
+                    maSanPham: "2",
+                    tenSanPham: "Cà phê",
+                    soLuong: 10,
+                    giaTien: "20000",
+                },
+                sp03: {
+                    maSanPham: "3",
+                    tenSanPham: "Trà sữa",
+                    soLuong: 15,
+                    giaTien: "20000",
+                }
+            },
+            thanhToanThanhCong: true,
+            diaChiGiaoHang: "Đông Ngạc"
+        }
+        let tongSP1 = thongTinDonHang.danhSachSanPham.sp01.giaTien * thongTinDonHang.danhSachSanPham.sp01.soLuong;
+        let tongSP2 = thongTinDonHang.danhSachSanPham.sp02.giaTien * thongTinDonHang.danhSachSanPham.sp02.soLuong;
+        let tongSP3 = thongTinDonHang.danhSachSanPham.sp03.giaTien * thongTinDonHang.danhSachSanPham.sp03.soLuong;
+
+        let tongTien = tongSP1 + tongSP2 + tongSP3;
+
+        document.writeln("Tong tien don hang = " + tongTien + "<br>" );
+        document.writeln("độ dài của mã đơn hàng: " + thongTinDonHang.maDonHang.length + "<br>");   
+        var myString = "Hello Hung";
+        document.writeln(myString.slice(1,4));
+        document.writeln(myString.replace("Hello", "Hi") + "<br>");
+        document.writeln(myString.toLocaleLowerCase()+ "<br>");
+        //indexOf trả ra vị trí xuất hiện đầu tiên
+        //Nếu có: vị trí, nếu ko: -1
+        document.writeln(myString.indexOf('e')+ "<br>");
+        document.writeln(myString.includes('e')+ "<br>");
+        //Tách chuỗi thành mảng
+        document.writeln(myString.split('')+ "<br>");
+        let danhSach=["Nguyễn Lê Hoàng","Đào Đình Hùng","Lê Duy Ngọc Đức"]
+        document.writeln(danhSach[1].startsWith("Nguyễn"));
+        //chuyển chuỗi về số
+        let so = "123";
+        document.writeln(typeof(so));
+        document.writeln(typeof(Number(so)));
+        
+        var pi=3.14159;
+        document.writeln(pi.toFixed(3)+ "<br>");
+
+        let toDay = new Date();
+        document.writeln(toDay)
+        document.writeln(toDay.getDate())
+    </script>
+</body>
+</html>
