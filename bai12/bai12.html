@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Mảng
+        let arr = [1, 2, 3, 4, 5];
+        document.writeln(arr.length);
+
+        //cách đọc phần tử trong mảng
+        document.writeln(arr[3]);
+
+        let arr2 = [1, 2, 3, 4, 5, 'a', 'b', 'c', 5, 6];
+        // chỉ ra vị trí đầu tiên xuất hiện giá trị nhập
+        document.writeln(arr2.indexOf('a'));
+        //như trên nhưng vị trí cuối cùng
+        document.writeln(arr2.lastIndexOf(5) +"<br>");
+
+        //let s = "abc";
+        //kiểm tra biến có phải mảng ko
+        //document.writeln(Array.isArray(a));
+
+        //nối các mảng
+        let a, b, c, d;
+        a =[1, 2, 3];
+        b = "javascript";
+        c = [42, "VBScript"];
+        d = a.concat(b, c);
+        d[3] = 4;
+        //pop(): xóa phần tử cuối cùng
+        e = d.pop();
+        //push():thêm phẩn tử vào cuối mảng
+        d.push("Ken");        
+        document.writeln(d +"<br>");
+        //join-thêm một đối tượng vào giữa
+        document.writeln(d.join("-")+"<br>");
+        document.writeln(e + "<br>");
+        document.writeln(d.reverse()+"<br>");
+        //shift():xóa phần tử đầu tiên
+        //unshift(): thêm phần tử vào đầu mảng
+        document.writeln(d + "<br>");    
+
+        //if else
+        let today = new Date();
+        let now = today.getHours(); //11h
+        if (now < 10) {
+            document.writeln("Chào buổi sáng"+ "<br>");
+        } else if (now >= 10 && now < 12) {
+            document.writeln("chào buổi trưa"+ "<br>");
+        } else if (now >12 && now<17) {
+            document.writeln("chào buổi chiều"+ "<br>");
+        } else if (now >17 && now<22) {
+            document.writeln("chào buổi tối"+ "<br>");
+        } else (now >22 && now<24) ;{
+            document.writeln("chào buổi đêm"+ "<br>");
+        }
+        let so = "10000000000000001";
+        //document.writeln(so[so.length -1]); lấy số cuối
+        let soCuoiCung = parseInt(so[so.length -1]);
+        //kiểm tra số là số chẵn/lẻ
+        if(soCuoiCung % 2==0){
+            document.writeln("so chan");
+        }else{
+            document.writeln("so le");
+        }
+    </script>
+</body>
+</html>
