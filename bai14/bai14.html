@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 11</title>
+</head>
+<body>
+    <h1>Bài 11</h1>
+    <div>
+        Điểm A: <input type="number" id="diemA" placeholder="Nhap diem A">
+    </div>
+    <div>
+        Điểm B: <input type="number" id="diemB" placeholder="Nhap diem B">
+    </div>
+    <div>
+        Điểm C: <input type="number" id="diemC" placeholder="Nhap diem C">
+    </div>
+    <div>
+        <button onclick="xemketqua()">Tính điểm</button>
+    </div>
+    <div>
+        Ket qua: <input type="text" id="ketQua">
+    </div>
+    <script>
+        function xemketqua() {
+            let diemA = parseFloat(document.getElementById('diemA').value);
+            let diemB = parseFloat(document.getElementById('diemB').value);
+            let diemC = parseFloat(document.getElementById('diemC').value);
+            tinhDiem(diemA, diemB, diemC);
+
+        }
+        function tinhDiem(a,b,c) {
+            let tong;
+            if (kiemtrahople(a,b,c) == true) {
+                tong = a * 0.6 + b * 0.3 + c * 0.1;
+                document.writeln(tong);
+            }
+            if(tong>9){
+                document.writeln("điểm chữ là A+");
+            }
+            else if(tong >=8.5 && tong<9){
+                document.writeln("điểm chữ là A");
+            }
+            else if(tong >=8 && tong<8.5){
+                document.writeln("điểm chữ là B+");
+            }
+            else if(tong >=7 && tong<8){
+                document.writeln("điểm chữ là B");
+            }
+            else if(tong >=6.5 && tong<7){
+                document.writeln("điểm chữ là C+");
+            }
+            else if(tong >=5 && tong<6.5){
+                document.writeln("điểm chữ là C");
+            }
+            else if(tong >=4 && tong<5){
+                document.writeln("điểm chữ là D");
+            }
+        }
+        function kiemtrahople() {
+            let ketQua=true;
+            if(a<0 || a>10 || typeof (a) !="number") {
+                document.writeln("Điểm A không hợp lệ");
+                ketQua = false;
+            }
+            if (b<0 || b>10 || typeof(b) !="number") {
+                document.writeln("Điểm B không hợp lệ");
+                ketQua = false;
+            }
+            if (c<0 || c>10 || typeof(c) !="number") {
+                document.writeln("Điểm C không hợp lệ");
+                ketQua = false;
+            }
+            return ketQua;
+            }    
+        //let a = 9;
+        //let b = 6;
+        //let c = 8;
+        //tinhDiem(a,b,c);
+    </script>
+</body>
+</html>
