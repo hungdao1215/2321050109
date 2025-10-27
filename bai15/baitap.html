@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài tập</title>
+</head>
+<body>
+    <div>
+        Chiều cao: <input type="number" id="chieuCao" placeholder="Nhập chiều cao">
+    </div>
+    <div>
+        Cân nặnng: <input type="number" id="canNang" placeholder="Nhập cân nặng">
+    </div>
+    <div>
+        <button onclick="kiemTraChiSoBMI()">Kiểm tra chỉ số BMI</button>
+    </div>
+    <div>
+        Kết quả: <input type="text" id="ketQua">
+    </div>
+    <script>
+        function tinh(cn, cc){
+            if (kiemtrahople(cn, cc)){
+                return;
+            }
+            let tong = cn / (cc * cc);
+            let tongDiem = "";
+            document.getElementById("ketqua").value = tongDiem
+        }
+        function kiemtrahople(cn, cc){
+            let hopLe = true;
+            if (isNaN(cn))
+        }
+    </script>
+</body>
+</html>
