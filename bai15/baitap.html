@@ -6,30 +6,67 @@
     <title>Bài tập</title>
 </head>
 <body>
-    <div>
-        Chiều cao: <input type="number" id="chieuCao" placeholder="Nhập chiều cao">
-    </div>
-    <div>
-        Cân nặnng: <input type="number" id="canNang" placeholder="Nhập cân nặng">
-    </div>
-    <div>
-        <button onclick="kiemTraChiSoBMI()">Kiểm tra chỉ số BMI</button>
-    </div>
-    <div>
-        Kết quả: <input type="text" id="ketQua">
+    <h2>Tính BMI</h2>
+    <div class="holder">
+        <div>
+            Chiều cao (m): <input type="number" id="chieuCao" placeholder="Nhập chiều cao">
+        </div>
+        <div>
+            Cân nặng (kg): <input type="number" id="canNang" placeholder="Nhập cân nặng">
+        </div>
+        <div>
+            <button onclick="xemKetQua()">Kiểm tra chỉ số BMI</button>
+        </div>
+        <div>
+            Kết quả: <input type="text" id="ketQua" readonly>
+        </div>
+        <div class="anhbmi"> 
+            <img src="" id="anh" alt="Kết Quả" style="max-width: 200px;">
+        </div>
     </div>
     <script>
-        function tinh(cn, cc){
-            if (kiemtrahople(cn, cc)){
-                return;
-            }
-            let tong = cn / (cc * cc);
-            let tongDiem = "";
-            document.getElementById("ketqua").value = tongDiem
+        function xemKetQua(){
+            let chieuCao = parseFloat(document.getElementById('chieuCao').value);
+            let canNang = parseFloat(document.getElementById('canNang').value);
+            tinhToan(chieuCao, canNang);
         }
-        function kiemtrahople(cn, cc){
-            let hopLe = true;
-            if (isNaN(cn))
+
+        function kiemTra(a, b){
+            let ketQua = true;
+            if (a <= 0 || a > 3 || isNaN(a)){
+                alert("Nhập lại chiều cao (0-3m)");
+                ketQua = false;
+            }
+            if(b <= 0 || b > 300 || isNaN(b)){
+                alert("Nhập lại cân nặng (0-300kg)");
+                ketQua = false;
+            }
+            return ketQua;
+        }
+    
+        function tinhToan(a, b){
+            if(kiemTra(a, b)){
+                let bmi = (b/(a*a));
+                let lamTron = Number(bmi.toFixed(2));
+                let ketQuaText = "BMI: " + lamTron;
+
+                if(lamTron < 18.5){
+                    document.getElementsByTagName('img')[0].src = '..bai15/image/thieucan.png';
+                    document.getElementById('ketQua').value = ketQuaText + " - Thiếu cân";
+                } else if (lamTron >= 18.5 && lamTron < 24.9){
+                    document.getElementsByTagName('img')[0].src = '../bai15/image/binhthuong.png';
+                    document.getElementById('ketQua').value = ketQuaText + " - Bình thường";
+                } else if (lamTron >= 25 && lamTron < 29.9){
+                    document.getElementsByTagName('img')[0].src = '../bai15/image/anh/thua.png';
+                    document.getElementById('ketQua').value = ketQuaText + " - Thừa cân";
+                } else if (lamTron >= 30 && lamTron < 39.9){
+                    document.getElementsByTagName('img')[0].src = '../bai15/image/beocapdo1.png';
+                    document.getElementById('ketQua').value = ketQuaText + " - Béo phì độ 1";
+                } else {
+                    document.getElementsByTagName('img')[0].src = '../bai15/image/beonang.png';
+                    document.getElementById('ketQua').value = ketQuaText + " - Béo phì nặng";
+                }
+            }
         }
     </script>
 </body>

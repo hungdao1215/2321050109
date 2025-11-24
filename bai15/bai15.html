@@ -10,7 +10,7 @@
     <div class="all">
         <h2>Ví dụ về chế độ</h2>
         <div class="anh">
-            <img src="..good-morning.png" width="200px" alt="">
+            <img src="../bai15/image/beocapdo1.png" width="100px" alt="">
         </div>
         <h2>Chế độ: sáng</h2>
     <div>
@@ -21,19 +21,19 @@
         let cheDO =true;
         function doiCheDo() {
             if (cheDO == true){
-                document.getElementsByTagName('body')[0].style = 'background-color';
+                document.getElementsByTagName('body')[0].style = 'background-color: black';
                 document.getElementsByTagName('h2')[1].innerHTML = 'Chế độ: tối';
                 document.getElementsByTagName('h2')[0].style = 'color: white';
                 document.getElementsByTagName('h2')[1].style = 'color: white';
-                document.getElementsByTagName('img')[0].src = '..good-morning.jpg';
+                document.getElementsByTagName('img')[0].src = '../bai15/image/thieu.png';
                 cheDO = false;
             }
             else {
-                ocument.getElementsByTagName('body')[0].style = 'background-color';
+                document.getElementsByTagName('body')[0].style = 'background-color: white';
                 document.getElementsByTagName('h2')[1].innerHTML = 'Chế độ: tối';
                 document.getElementsByTagName('h2')[0].style = 'color: black';
                 document.getElementsByTagName('h2')[1].style = 'color: black';
-                document.getElementsByTagName('img')[0].src = '..logo.jpg';
+                document.getElementsByTagName('img')[0].src = '../bai15/image/beocapdo1.png';
                 cheDO = true;
             }
         }

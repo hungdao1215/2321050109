@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FPT Play</title>
+    <style>
+        img{
+            border-radius: 7px;
+        }
+        iframe{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script src="script.js"></script>
+    <header>
+        <div class="header-container">
+            <!-- Danh mục trang web -->
+        <nav class="danhmuc">
+            <img class="logo" src="logowebsite4x_1748221195181.png">
+            <ul class="danhmuc-danhsach">
+                <li class="danhmuc-lienket"><a href="#">FPT Play</a></li>
+                <li class="danhmuc-lienket"><a href="#">Trang chủ</a></li>
+                <li class="danhmuc-lienket"><a href="#">Truyền hình</a></li>
+                <li class="danhmuc-lienket"><a href="#">Phim bộ</a></li>
+                <li class="danhmuc-lienket"><a href="#">V.League</a></li>
+                <li class="danhmuc-lienket"><a href="#">Thiếu nhi</a></li>
+                <li class="danhmuc-lienket"><a href="#">Xem thêm</a></li>
+            </ul>
+        </nav>
+        <!-- Chức năng -->
+         <div class="chucnang">
+            <div>
+                 <button class="muagoi">Mua Goi</button>
+            </div>
+            <div>
+                 <button class="dangnhap">Đăng nhập</button>
+            </div>     
+         </div>
+        </div>
+    </header>
+    <main>
+        <div class="quangcao">
+            <img src="b827cc644198cac69389.jpg" alt="">
+        </div>
+        <div class="quangcao2">
+            <img src="qc.jpg" alt="">
+        </div>
+        <div class="container">
+            <div class="poster">
+            <img class="banner" src="640x396-muado.jpg" alt="" width="100%">
+                 <iframe width="560" height="560" src="" 
+                    title="YouTube video player" frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                </iframe>
+            <div style="display: contents;justify-content: center;"></div>
+        </div>
+        <h3 class="tenbanner" style="margin: 20px;">Mưa đỏ</h3>
+        <button onclick="xemFilm()" >Xem Trailer</button>
+        <div class="theloai">
+            <div class="theloai-header">
+            <div class="tentheloai">
+                Phim chiếu rạp
+            </div>
+            <div class="more">
+                        <a class="theloai-lienket" href="#">Xem them</a>
+            </div>
+            </div>
+            <div class="danhsach">
+                <div class="phim">
+                    <div class="anh" onclick="choseFilm(1)">
+                        <img class="logofilm" src="350x495-muado.jpg"  width="100px" height="100px">
+                    </div>
+                    <div class="ten">
+                        Mưa đỏ
+                    </div>
+                </div>
+                <div class="phim">
+                    <div class="anh" onclick="choseFilm(2)">
+                        <img class="logofilm" src="conan.jpg" alt="" width="10%">
+                    </div>
+                    <div class="ten">
+                        Conan
+                    </div>
+                </div>
+                <div class="phim">
+                    <div class="anh" onclick="choseFilm(3)">
+                        <img class="logofilm" src="Người_đẹp_và_quái_vật_poster.jpg" alt="" width="10%">
+                    </div>
+                    <div class="ten">
+                        Người đẹp và quái vật
+                    </div>
+                </div>
+                <div class="phim">
+                    <div class="anh" onclick="choseFilm(4)">
+                        <img src="aquaman.jpg" alt="" width="10%">
+                    </div>
+                    <div class="ten">
+                        Aquaman
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="theloai">
+            <div class="tentheloai">
+                Phim chiếu rạp
+            </div>
+            <div class="danhsach">
+                <div class="phim">
+                    <div class="anh">
+                        <img src="350x495-muado.jpg" alt="">
+                    </div>
+                    <div class="ten">
+                        Mưa đỏ
+                    </div>
+                </div>
+                <div class="phim">
+                    <div class="anh">
+                        <img src="350x495-muado.jpg" alt="">
+                    </div>
+                    <div class="ten">
+                        Mưa đỏ
+                    </div>
+                </div>
+                <div class="phim">
+                    <div class="anh">
+                        <img src="350x495-muado.jpg" alt="">
+                    </div>
+                    <div class="ten">
+                        Mưa đỏ
+                    </div>
+                </div>
+                <div class="phim">
+                    <div class="anh">
+                        <img src="350x495-muado.jpg" alt="">
+                    </div>
+                    <div class="ten">
+                        Mưa đỏ
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img class="footer-anh" src="logowebsite4x_1748221195181.png" alt=""><br>
+                <img class="footer-anh" src="_dmca_premi_badge_4.png" " alt=""><br>
+                <img class="footer-anh" src="logoSaleNoti.cb85045.png" alt="">
+            </div>
+            <div class="footerconten">
+                <div class="footer-title">
+                    Ve FPT Play
+                </div>
+                <div class="footer-the"><a class="footer-lienket" href="#">Gioi thieu</a></div>
+                <div class="footer-the"><a class="footer-lienket" href="#">Cac goi dich vu</a></div>
+                <div class="footer-the"><a class="footer-lienket" href="#">Lien he</a></div>
+                <div class="footer-the"><a class="footer-lienket" href="#">Trung tam ho tro</a></div>
+                <div class="footer-the"><a class="footer-lienket" href="#">Thong tin</a></div>
+            </div>
+            <div class="footerconten">
+                <div class="footer-title">
+                    Dich vu
+                </div>
+                <div class="footer-the"><a class="footer-lienket" href="#">Goi DATA</a></div>
+                <div class="footer-the"><a class="footer-lienket" href="#">Quang cao</a></div>
+                <div class="footer-the"><a class="footer-lienket" href="#">Mua goi</a></div>
+                <div class="footer-the"><a class="footer-lienket" href="#">Bao hanh</a></div>
+            </div>
+            <div class="footerconten">
+                <div class="footer-title">
+                    Quy dinh
+                </div>
+                <div class="footer-the"><a class="footer-lienket" href="#">Dieu khoan su dung</a></div>
+                <div class="footer-the"><a class="footer-lienket" href="#">Chinh sach thanh toan</a></div>
+                <div class="footer-the"><a class="footer-lienket" href="#">Chinh sach bao mat<br> thong tin du lieu</a></div>
+                <div class="footer-the"><a class="footer-lienket" href="#">Cam ket cua FPT Telecom</a></div>
+            </div>
+            <div class="infofpt">
+                <div class="footer-theinfo">
+                    19006600
+                </div>
+                <div class="footer-theinfo">
+                    hotrofptplay@fpt.com
+                </div>
+                <div>
+                    Theo doi chung toi tren:
+                    <a href="#"><img src="" alt=""></a>
+                    <a href="#"><img src="" alt=""></a>
+                </div>
+            </div>
+        </div>
+        <div style="width: 70%;margin: auto;">
+            <p style="color: white;">Công ty Cổ phần Viễn Thông FPT - Người đại diện: Ông Hoàng Việt Anh. Trụ sở: Tầng 2, Tòa nhà FPT Cầu Giấy,
+             Số 17 Phố Duy Tân, Phường Dịch Vọng Hậu, Quận Cầu Giấy, TP.Hà Nội</p>
+        </div>
+    </footer>
+
+</body>
+</html>
