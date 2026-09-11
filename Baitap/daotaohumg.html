@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Đào tạo</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        .danh-sach-muc{
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            display: flex;
+            /* gap: khoảng cách các đối tượng ở trong */
+            gap: 20px;
+        }
+        .danh-muc{
+            background-color:#198cf0;
+        }
+        .lien-ket{
+            color: white;
+            text-decoration: none;
+        }
+        a:hover{
+            color: cyan;
+        }
+        main{
+            display: flex;
+        }
+        .trai{
+            width: 20%;
+            height: 100vh;
+            /* tạo dường viền dùng border */
+            /* 3 tham số: độ dày, loại đường viền, màu sắc */
+            border-right:1px solid #198cf0;
+        }
+        .phai{
+            width: 80%;
+            height: 100vh;
+        }
+        .khoi-dang-nhap{
+            background-color: rgb(166, 163, 163);
+            width: 100%;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <!-- danh mục -->
+    <nav class="danh-muc">
+        <ul class="danh-sach-muc">
+            <li class="muc"><a href="#" class="lien-ket">Thực tập, Đồ án</a></li>
+            <li class="muc"><a href="#" class="lien-ket">Thủ tục một cửa</a></li>
+            <li class="muc"><a href="#" class="lien-ket">Một cửa online</a></li>
+            <li class="muc"><a href="#" class="lien-ket">Email HUMG</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="trai">
+            <div class="khoi-dang-nhap">
+                <form action="">
+                    <div class="khoi-thong-tin">
+                        <p>Tài khoản</p>
+                        <input type="text" name="" id="">
+                    </div>
+                    <div class="khoi-thong-tin">
+                        <p>Mật khẩu</p>
+                        <input type="password" name="" id="">
+                    </div>
+                    <div class="quen-mat-khau">
+                        <a class="quen-mat-khau-lien-ket" href=""></a>
+                    </div>
+                    <div class="khoi-thong-tin">
+                        <button class="login">Đăng nhập</button>
+                        <button class="login">Đăng nhập với Micrrosoft Office</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="phai">
+            <div class="danh-sach-tin">
+                <div class="tin">
+                    <div class="chưc-nang">
+                        <div class="tieu-de">Tin tức</div>
+                        <div class="xem-tiep"><a class="lien-ket-xem-tiep">Xem tiếp</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
