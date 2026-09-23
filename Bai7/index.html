@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Internal JavaScript -->
+    <script>
+        //in ra màn hình
+        document.writeln("Hello World! <br>");
+
+        //khai báo biến
+        var name = "chay go <br>";
+        document.writeln(name);
+
+        name = "Lo <br>";
+        document.writeln(name)
+
+        var year = 2026;
+        document.writeln(year)
+
+        //phép toán
+        var soThuNhat = 10;
+        var soThuHai = 5;
+        var ketQua = 0;
+        //cộng +
+        document.write("<br> Ket qua soThu1 + soThu2 la: ")
+        ketQua = soThuNhat+soThuHai;
+        document.writeln(ketQua)
+        //trừ -
+        document.write("<br> Ket qua soThu1 - soThu2 la: ")
+        ketQua = soThuNhat-soThuHai;
+        document.writeln(ketQua)
+        //nhân *
+        document.write("<br> Ket qua soThu1 * soThu2 la: ")
+        ketQua = soThuNhat*soThuHai;
+        document.writeln(ketQua)
+        //chia /
+        document.write("<br> Ket qua soThu1 / soThu2 la: ")
+        ketQua = soThuNhat/soThuHai;
+        document.writeln(ketQua)
+        //%
+        document.write("<br> Ket qua soThu1 % soThu2 la: ")
+        ketQua = soThuNhat%soThuHai;
+        document.writeln(ketQua)
+
+        //++
+        document.writeln("<br>");
+        document.writeln(++soThuNhat);
+
+        //--
+        document.writeln("<br>");
+        document.writeln(--soThuNhat);
+
+        //+=
+        soThuNhat += soThuHai;
+        document.writeln(soThuNhat);
+
+        //-=
+        soThuNhat -= soThuHai;
+        document.writeln(soThuNhat);
+
+        var ho = "Do";
+        document.writeln("<br>" + ho + " " + name);
+        document.writeln("<br>");
+        document.writeln(ho.length);
+
+        //kiểm tra kiểu dữ liệu của biến
+        document.writeln(typeof(ho));
+        document.writeln("<br>");
+        //
+        var hoVaTen = "Do Ri Con";
+        document.writeln(hoVaTen.indexOf("R"));
+        document.writeln("<br>");
+        document.writeln(hoVaTen.includes("C"));
+        document.writeln("<br>");
+        document.writeln(hoVaTen.startsWith("Do"));
+        //thay thế kí tự
+        document.writeln(hoVaTen.replace("Do","Dang"));
+
+        document.writeln("<br>");
+        document.writeln(hoVaTen.toUpperCase());
+
+        document.writeln("<br>");
+        document.writeln(hoVaTen.toLowerCase());
+
+        document.writeln("<br>");
+        document.writeln(hoVaTen.toLocaleLowerCase());
+    </script>
+    <!-- External JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
