@@ -1,1 +1,0 @@
-document.writeln("Hello World! 2 <br>")

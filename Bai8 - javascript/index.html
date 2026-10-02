@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS - 2</title>
+</head>
+<body>
+    <script>
+        //function
+        function sayHello(){
+            document.writeln("Hello");
+        }
+
+        sayHello();
+
+        //có tham số
+
+
+        function sayHello2(ten){
+            document.writeln("<br> Xin chao ban" + ten)
+        }
+        sayHello2("Duck");
+        sayHello2("Tuat Hoang");
+        document.writeln("<br>");
+
+        function tinhTong(soThu1, soThu2){
+            if(isNaN(a) == false && isNaN(b) == false){
+                document.write(a + b)
+            }
+        }
+        var soThu1 = prompt("Nhap vao so thu 1");
+        var soThu2 = prompt("Nhap vao so thu 2");
+        tinhTong(soThu1, soThu2);
+
+        //BVN: Viết hàm tính điểm chữ dưa trên 3 đầu điểm (A,B,C)
+        //tong = A*0.6 + B*0.3 + C*0.1 => điểm chữ tương ứng
+    </script>
+</body>
+</html>
