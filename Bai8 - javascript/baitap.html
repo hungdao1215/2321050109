@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        Năm sinh: <input id="namSinh" type="number">
+    </div>
+    <div>
+        <button onclick="tinhTuoi()">Tính tuổi</button>
+    </div>
+    <div>
+        Tuổi: <input id="tuoi" type="text">
+    </div>
+    <script>
+        function tinhTuoi(){
+            var namSinh = parseInt(document.getElementById("namSinh").value);
+            var namNay = new Date().getFullYear();
+            var tuoi = namNay - namSinh;
+            document.getElementById("tuoi").value = tuoi();
+        }
+    </script>
+</body>
+</html>

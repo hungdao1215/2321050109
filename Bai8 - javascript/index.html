@@ -6,35 +6,87 @@
     <title>JS - 2</title>
 </head>
 <body>
+    <div>
+        Nhập điểm A: <input id="diemA" type="number">
+    </div>
+    <div>
+        Nhập điểm B: <input id="diemB" type="number">
+    </div>
+    <div>
+        Nhập điểm C: <input id="diemC" type="number">
+    </div>
+    <div>
+        <button onclick="tinhDiem()">Tính điểm</button>
+    </div>
+    <div>
+        Kết quả: <input id="ketQua" type="text">
+    </div>
     <script>
-        //function
-        function sayHello(){
-            document.writeln("Hello");
-        }
 
-        sayHello();
+        //function
+        // function sayHello(){
+        //     document.writeln("Hello");
+        // }
+
+        // sayHello();
 
         //có tham số
 
 
-        function sayHello2(ten){
-            document.writeln("<br> Xin chao ban" + ten)
-        }
-        sayHello2("Duck");
-        sayHello2("Tuat Hoang");
-        document.writeln("<br>");
+        // function sayHello2(ten){
+        //     document.writeln("<br> Xin chao ban" + ten)
+        // }
+        // sayHello2("Duck");
+        // sayHello2("Tuat Hoang");
+        // document.writeln("<br>");
 
-        function tinhTong(soThu1, soThu2){
-            if(isNaN(a) == false && isNaN(b) == false){
-                document.write(a + b)
-            }
-        }
-        var soThu1 = prompt("Nhap vao so thu 1");
-        var soThu2 = prompt("Nhap vao so thu 2");
-        tinhTong(soThu1, soThu2);
+        // function tinhTong(soThu1, soThu2){
+        //     if(isNaN(a) == false && isNaN(b) == false){
+        //         document.write(a + b)
+        //     }
+        // }
+        // var soThu1 = prompt("Nhap vao so thu 1");
+        // var soThu2 = prompt("Nhap vao so thu 2");
+        // tinhTong(soThu1, soThu2);
 
         //BVN: Viết hàm tính điểm chữ dưa trên 3 đầu điểm (A,B,C)
         //tong = A*0.6 + B*0.3 + C*0.1 => điểm chữ tương ứng
+        //chuyen chuoi thanh so
+        // parseInt("42");
+        // parseInt("42.33");
+        // parseFloat("42.33");
+        // 3+3+parseInt;
+        function tinhDiem(){
+            var a = parseFloat(document.getElementById("diemA").value);
+            var b = parseFloat(document.getElementById("diemB").value);
+            var c = parseFloat(document.getElementById("diemC").value);
+
+            document.getElementById("ketQua").value = tinhDiemChu(a,b,c);
+        }
+
+        function tinhDiemChu(a,b,c){
+            var tong = a*0.6 + b*0.3 + c*0.1;
+            var kp = "";
+            if(tong >=0 && tong < 4){
+                kq="F";
+            }
+            else if(tong >= 4 && tong <5){
+                kq="D";
+            }
+            else if(tong >=5 && tong<7){
+                kq="C";
+            }
+            else if(tong >=7 && tong<8){
+                kq="B";
+            }
+            else if(tong >=8 && tong<=10){
+                kq="A";
+            }
+            else{
+                kq ="Điểm không hợp lệ";
+            }
+            return
+        }
     </script>
 </body>
 </html>
