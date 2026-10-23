@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 </head>
 
 <body>
@@ -29,9 +30,15 @@
     </div>
     </header>
     <main>
-        <div class="banner">
-            <img class="banner-anh" src="../anh/chó.jpg" alt="">
+        <!-- banner -->
+        <div onclick="xemTrailer()" class="banner">
+            <img class="banner-img" src="../anh/chó.jpg" alt="">
         </div>
+        <!-- trailer -->
+        <div style="display: none" class="banner" >
+            <iframe class="banner-img" width="100%" height="750" src="https://www.youtube.com/embed/AkWvzeXDUxY?si=DS7CZBq6mEJuASKM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <!-- Thể loại -->
         <div class="danh-sach-the-loai">
             <div class="the-loai">
                 <div class="ten-the-loai">
@@ -73,6 +80,6 @@
                 </div>
             </div>
         </div>
-    </main>   
+    </main> 
 </body>
 </html>

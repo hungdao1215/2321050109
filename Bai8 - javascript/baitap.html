@@ -7,20 +7,26 @@
 </head>
 <body>
     <div>
-        Năm sinh: <input id="namSinh" type="number">
+        Năm sinh: <input id="nam" type="number">
     </div>
     <div>
-        <button onclick="tinhTuoi()">Tính tuổi</button>
+        <button onclick="tinh()">Tính tuổi</button>
     </div>
     <div>
-        Tuổi: <input id="tuoi" type="text">
+        Tuổi: <input id="tuoi" type="number">
     </div>
     <script>
-        function tinhTuoi(){
-            var namSinh = parseInt(document.getElementById("namSinh").value);
+        function tinh(){
+            var namSinh = parseInt(document.getElementById("nam").value);
+
+            document.getElementById("tuoi").value = tinhTuoi(namSinh);
+        }
+
+        function tinhTuoi(namSinh){
             var namNay = new Date().getFullYear();
             var tuoi = namNay - namSinh;
-            document.getElementById("tuoi").value = tuoi();
+
+            return tuoi;
         }
     </script>
 </body>
