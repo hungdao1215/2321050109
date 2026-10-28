@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ví dụ đổi vid</title>
+    <style>
+        .video{
+            width: 50%;
+            height: 500px;
+            margin: auto;
+        }
+
+        .danh-sach{
+            width: 80%;
+            display: flex;
+            margin: 50px auto;
+            justify-content: space-between;
+        }
+        .anh{
+            width: 20%;
+            height: 100px;
+        }
+        img{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <!-- màn xem -->
+     <div class="video" >
+        <iframe class="banner-img" width="100%" height="500" src="https://www.youtube.com/embed/AkWvzeXDUxY?si=DS7CZBq6mEJuASKM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <h3 class="ten">Phoenix</h3>
+    </div>
+
+     <div class="danh-sach">
+        <div class="anh" onclick="chonVid(1)">
+            <img src="../anh/640x396-muado.jpg" alt="">
+            <p>Mưa đỏ</p>
+        </div>
+        <div class="anh" onclick="chonVid(2)">
+            <img src="../anh/aquaman.jpg" alt="">
+            <p>Acquaman</p>
+        </div>
+        <div class="anh" onclick="chonVid(3)">
+            <img src="../anh/chó.jpg" alt="">
+            <p>Labrador</p>
+        </div>
+        <div class="anh" onclick="chonVid(4)">
+            <img src="../anh/conan.jpg" alt="">
+            <p>Congan</p>
+     </div>
+     <script>
+        var danhSachVid = [
+            {
+                id: 1,
+                ten: "Mưa đỏ",
+                duongDanAnh: "640x396-muado.jpg",
+                duongDanYoutube: "https://www.youtube.com/embed/AkWvzeXDUxY?si=DS7CZBq6mEJuASKM"
+            },
+            {
+                id: 2,
+                ten: "Acquaman",
+                duongDanAnh: "aquaman.jpg",
+                duongDanYoutube: "https://www.youtube.com/embed/AkWvzeXDUxY?si=DS7CZBq6mEJuASKM"
+            },
+            {
+                id: 3,
+                ten: "Labrado",
+                duongDanAnh: "chó.jpg",
+                duongDanYoutube: "https://www.youtube.com/embed/AkWvzeXDUxY?si=DS7CZBq6mEJuASKM"
+            },
+            {
+                id: 4,
+                ten: "Congan",
+                duongDanAnh: "conan.jpg",
+                duongDanYoutube: "https://www.youtube.com/embed/AkWvzeXDUxY?si=DS7CZBq6mEJuASKM"
+            },
+        ];
+
+        function chonVid(id){
+            for (let i = 0; i < danhSachVid.length; i++){
+                if(danhSachVid[i].id == id){
+                document.getElementsByClassName("ten")[0].innerHTML = danhSachVid[i].ten;
+                document.getElementsByTagName("iframe")[0].src = danhSachVid[1].duongDanYoutube;
+                }
+            }
+        }
+     </script>
+</body>
+</html>
