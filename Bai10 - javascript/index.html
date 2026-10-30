@@ -56,25 +56,25 @@
                 id: 1,
                 ten: "Mưa đỏ",
                 duongDanAnh: "640x396-muado.jpg",
-                duongDanYoutube: "https://www.youtube.com/embed/AkWvzeXDUxY?si=DS7CZBq6mEJuASKM"
+                duongDanYoutube: "https://www.youtube.com/embed/BD6PoZJdt_M?si=6UlHbyKatPIG6f8O&amp;start=2"
             },
             {
                 id: 2,
                 ten: "Acquaman",
                 duongDanAnh: "aquaman.jpg",
-                duongDanYoutube: "https://www.youtube.com/embed/AkWvzeXDUxY?si=DS7CZBq6mEJuASKM"
+                duongDanYoutube: "https://www.youtube.com/embed/2wcj6SrX4zw?si=qSBMUUe7Lb76QuJe&amp;start=2"
             },
             {
                 id: 3,
                 ten: "Labrado",
                 duongDanAnh: "chó.jpg",
-                duongDanYoutube: "https://www.youtube.com/embed/AkWvzeXDUxY?si=DS7CZBq6mEJuASKM"
+                duongDanYoutube: "https://www.youtube.com/embed/yrBDTtzVjSI?si=9eM9dv2gkTu5aNRW"
             },
             {
                 id: 4,
                 ten: "Congan",
                 duongDanAnh: "conan.jpg",
-                duongDanYoutube: "https://www.youtube.com/embed/AkWvzeXDUxY?si=DS7CZBq6mEJuASKM"
+                duongDanYoutube: "https://www.youtube.com/embed/dz5mN-iIC4g?si=KKAnaTPuA1_I9DqH&amp;start=2"
             },
         ];
 
@@ -82,7 +82,7 @@
             for (let i = 0; i < danhSachVid.length; i++){
                 if(danhSachVid[i].id == id){
                 document.getElementsByClassName("ten")[0].innerHTML = danhSachVid[i].ten;
-                document.getElementsByTagName("iframe")[0].src = danhSachVid[1].duongDanYoutube;
+                document.getElementsByTagName("iframe")[0].src = danhSachVid[i].duongDanYoutube;
                 }
             }
         }
