@@ -21,16 +21,16 @@ CREATE TABLE IF NOT EXISTS nguoi_dung(
 );
 
 -- the_loai
-id key AUTO_INCREMENT int,
+id int AUTO_INCREMENT PRIMARY KEY,
 ten_the_loai varchar(255),
 
 -- dien_vien
-id key AUTO_INCREMENT int,
+id int AUTO_INCREMENT PRIMARY KEY,
 ho_ten varchar(100),
 ngay_sinh date,
 
 -- phim
-id key AUTO_INCREMENT int,
+id int AUTO_INCREMENT PRIMARY KEY,
 ten_phim varchar(255),
 quoc_gia varchar(100),
 dao_dien_id int,
@@ -39,11 +39,26 @@ do_tuoi int,
 mo_ta varchar(255),
 
 --phim_the_loai
-id key AUTO_INCREMENT int,
+id int AUTO_INCREMENT PRIMARY KEY,
 phim_id int,
 the_loai_id int,
 
 --phim_dien_vien
-id key AUTO_INCREMENT int,
+id int AUTO_INCREMENT PRIMARY KEY,
 phim_id int,
 dien_vien_id int,
+
+
+SELECT phim.ten_phim,
+		phim_the_loai.id_phim,
+        the_loai.ten_the_loai,
+        phim.quoc_gia,
+        phim.nam_san_xuat,
+        dao_dien.ho_ten
+FROM phim
+JOIN phim_the_loai
+ON phim_the_loai.id_phim=phim.id_phim
+JOIN the_loai
+ON phim_the_loai.id_the_loai=the_loai.id_the_loai
+JOIN dao_dien
+ON phim.dao_dien_id=dao_dien.id_dao_dien
