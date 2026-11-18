@@ -45,13 +45,21 @@
         </div>
     </div>
 <?php
+    // Sử dụng include để nối 2 file php
+    include 'connect.php';
+    session_start();
     if(isset($_POST['tenDangNhap']) && isset($_POST['matKhau'])){
         $tenDangNhap = $_POST['tenDangNhap'];
         $matKhau = $_POST['matKhau'];
-        if($tenDangNhap == "admin" && $matKhau == "123"){
-            session_start();
+
+        $sql = "SELECT * from nguoi_dung where ten_dang_nhap = '$tenDangNhap' and mat_khau = '$matKhau'";
+
+        $result = mysqli_query($conn,$sql);
+
+        if(mysqli_num_rows($result) > 0){
+            //session_start();
             $_SESSION['dangnhap'] = "thanhcong";
-            header("Location: trangchu.php");
+            header("Location: index.php");
         }
         else{
             echo "Tên đăng nhập hoặc mật khẩu ko chính xác";
