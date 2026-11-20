@@ -23,7 +23,7 @@
     <?php
         session_start();
         if(!isset($_SESSION['dangnhap'])){
-            header("Location: trangchu.php");
+            header("Location: index.php");
         }
         include 'connect.php';
 
@@ -53,6 +53,15 @@
                     break;
                 case 'phim';
                     include 'phim.php';
+                    break;
+                case 'themtaikhoan';
+                    include 'themtaikhoan.php';
+                    break;
+                case 'capnhattaikhoan';
+                    include 'capnhattaikhoan.php';
+                    break;
+                case 'xoataikhoan';
+                    include 'xoataikhoan.php';
                     break;
             }
         }

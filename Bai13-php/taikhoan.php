@@ -8,19 +8,27 @@
         table{
             width: 100%;
         }
-        tr, th, td{
+        .tr, th, td{
             border: 1px solid black; 
         }
-        btn-add{
+        .btn-add{
             background-color: green;
             padding: 10px;
+        }
+        .capnhat{
+            background-color:green;
+            border-radius:5px;
+        }
+        .xoa{
+            background-color:red;
+            border-radius:5px;
         }
     </style>
 </head>
 <body>
     <h1>Tài khoản</h1>
     <div style="margin: 20px 0">
-    <a class="btn-add" href="index.php?page_layout=themtaikhoan">Thêm tài khoản</a>
+    <a class="btn-add" href="themtaikhoan.php?page_layout=themtaikhoan">Thêm tài khoản</a>
     </div>
     <?php
         $sql = "select * from nguoi_dung";
@@ -36,6 +44,7 @@
             <th>Ngày sinh</th>
             <th>Số điện thoại</th>
             <th>Giới tính</th>
+            <th>Chức năng</th>
         </tr>
         <?php
             while($row = mysqli_fetch_array($result))
@@ -48,7 +57,11 @@
             <td><?php echo $row['ho_ten'] ?></td>
             <td><?php echo $row['ngay_sinh'] ?></td>
             <td><?php echo $row['so_dien_thoai'] ?></td>
-            <td><?php echo $row['gioi_tinh'] ?></td>
+            <td><?php echo $row['gioi_tinh']==true?"Nam":"Nữ" ?></td>
+            <td>
+                <a class="capnhat" href= "index.php?page_layout=capnhattaikhoan&id=<?php echo $row['id']?>" >Cập nhật</a>
+                <a class ="xoa" href="index.php?page_layout=xoataikhoan&id=<?php echo $row['id']?>">Xóa</a>
+            </td>
         </tr>
         <?php
             }
