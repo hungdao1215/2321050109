@@ -28,7 +28,7 @@
 <body>
     <h1>Tài khoản</h1>
     <div style="margin: 20px 0">
-    <a class="btn-add" href="themtaikhoan.php?page_layout=themtaikhoan">Thêm tài khoản</a>
+    <a class="btn-add" href="index.php?page_layout=themtaikhoan">Thêm tài khoản</a>
     </div>
     <?php
         $sql = "select * from nguoi_dung";

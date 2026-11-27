@@ -30,31 +30,37 @@
     </style>
 </head>
 <body>
-    <h1>Thêm tài khoản</h1>
-    <form class="khoi" action="index.php?page_layout=themtaikhoan" method="POST">
+    <?php
+        $id = $_GET['id'];
+        $sql = "SELECT * FROM nguoi_dung WHERE id = $id";
+        $result = mysqli_query($conn,$sql);
+        $nguoidung = mysqli_fetch_assoc($result);
+    ?>
+    <h1>Cập nhật tài khoản</h1>
+    <form class="khoi" action="index.php?page_layout=capnhattaikhoan&id=<?php echo $id ?>" method="POST">
         <div class="i-text">
-            <input type="text" name="tenDangNhap" id="" placeholder="Tên đăng nhập">
+            <input type="text" name="tenDangNhap" value=<?php echo $nguoidung['ten_dang_nhap'] ?> id="" placeholder="Tên đăng nhập">
         </div>
         <div class="i-text">
-            <input type="password" name="matKhau" id="" placeholder="Mật khẩu">
+            <input type="password" name="matKhau" value=<?php echo $nguoidung['mat_khau'] ?> id="" placeholder="Mật khẩu">
         </div>
         <div class="i-text">
-            <input type="email" name="email" id="" placeholder="Email">
+            <input type="email" name="email" value=<?php echo $nguoidung['email'] ?> id="" placeholder="Email">
         </div>
         <div class="i-text">
-            <input type="text" name="hoTen" id="" placeholder="Ho tên">
+            <input type="text" name="hoTen" value=<?php echo $nguoidung['ho_ten'] ?> id="" placeholder="Họ tên">
         </div>
         <div class="i-text">
-            <input type="date" name="ngaySinh" id="" placeholder="Ngày sinh">
+            <input type="date" name="ngaySinh" value=<?php echo $nguoidung['ngay_sinh'] ?> id="" placeholder="Ngày sinh">
         </div>
         <div class="i-text">
-            <input type="text" name="sdt" id="" placeholder="Số điện thoại">
+            <input type="text" name="sdt" value=<?php echo $nguoidung['so_dien_thoai'] ?> id="" placeholder="Số điện thoại">
         </div>
         <div class="">
-            <input type="radio" name="gioiTinh" id="" value="1" checked> Nam
-            <input type="radio" name="gioiTinh" id="" value="0"> Nữ
+            <input type="radio" name="gioiTinh" id="" value="1" <?php $nguoidung['gioi_tinh']==true?"checked":""?>> Nam
+            <input type="radio" name="gioiTinh" id="" value="0" <?php !$nguoidung['gioi_tinh']==true?"checked":""?>> Nữ
         </div>
-        <button>Thêm</button>
+        <button>Cập nhật</button>
     </form>
     <?php
      if(   isset($_POST['tenDangNhap']) && 
@@ -79,16 +85,22 @@
             !empty($ngaySinh) &&
             !empty($sdt)){
                 //Người dùng nhập đủ thông tin
-                $sql = "INSERT INTO `nguoi_dung`(`ten_dang_nhap`, `mat_khau`, `email`, `ho_ten`, `ngay_sinh`, `so_dien_thoai`, `gioi_tinh`) 
-                VALUES ('$tenDangNhap','$matKhau','$email','$hoTen','$ngaySinh','$sdt','$gioiTinh')";
-
+                $sql = "UPDATE nguoi_dung SET
+                    ten_dang_nhap='$tenDangNhap',
+                    mat_khau='$matKhau',
+                    email='$email',
+                    ho_ten='$hoTen',
+                    so_dien_thoai='$sdt',
+                    gioi_tinh='$gioiTinh',
+                    ngay_sinh='$ngaySinh'
+                WHERE id='$id'";
                 $result = mysqli_query($conn, $sql);
 
                 if($result){
-                    header("Location: index.php?page_layout=taikhoan");
+                    header("Location: index.php?page_layout=taikhoan");    
                 }
                 else{
-                    echo "Thêm người dùng thất bại";
+                    echo "Cập nhật người dùng thất bại";
                 }
             }
             else{

@@ -46,22 +46,31 @@
                     include 'trangchu.php';
                     break;
                 case 'taikhoan';
-                    include 'taikhoan.php';
+                    include 'taikhoan/taikhoan.php';
                     break;
                 case 'danhmuc';
                     include 'danhmuc.php';
                     break;
                 case 'phim';
-                    include 'phim.php';
+                    include 'phim/phim.php';
+                    break;
+                case 'themphim';
+                    include 'phim/themphim.php';
+                    break;
+                case 'capnhatphim';
+                    include 'phim/capnhatphim.php';
+                    break;
+                case 'xoaphim';
+                    include 'phim/xoaphim.php';
                     break;
                 case 'themtaikhoan';
-                    include 'themtaikhoan.php';
+                    include 'taikhoan/themtaikhoan.php';
                     break;
                 case 'capnhattaikhoan';
-                    include 'capnhattaikhoan.php';
+                    include 'taikhoan/capnhattaikhoan.php';
                     break;
                 case 'xoataikhoan';
-                    include 'xoataikhoan.php';
+                    include 'taikhoan/xoataikhoan.php';
                     break;
             }
         }
